@@ -4,8 +4,10 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 async function Dbconnection()
+
 {
-    const connection = await mongoose.connect(process.env.MONGO_URI).then(()=>{
+    const mongouri = process.env.MONGO_URI
+    const connection = await mongoose.connect(mongouri).then(()=>{
         console.log("DB connected")
         })
 
