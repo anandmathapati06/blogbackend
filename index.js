@@ -5,11 +5,11 @@ import { open ,createBlog ,fetchBlogs ,byId} from './controller.js'
 import cors from 'cors'
 
 const app = express()
-Dbconnection()
 app.use(cors({ origin: '*' }))
 app.use(express.json({limit : '5mb'}))
 dotenv.config()
 
+Dbconnection()
 // app.use(express.static("./frontend/blogsite/dist"))
 
 // app.get("*", (req,res)=>{
