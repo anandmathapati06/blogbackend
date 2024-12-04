@@ -18,7 +18,7 @@ app.get("/blogs",fetchBlogs)
 app.get("/blogs/:id",byId)
 
 
-app.listen(8000,async ()=>{
+app.listen(process.env.PORT || 9000,async ()=>{
     console.log("listining...");
     await Dbconnection();
     
