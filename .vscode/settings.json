@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/f15a3a90-f833-4aba-872d-1b1eb6bac92b/resourceGroups/blogsite10/providers/Microsoft.Web/sites/blogsite10",
+    "appService.deploySubpath": "backend"
+}

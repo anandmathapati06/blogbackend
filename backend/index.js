@@ -6,7 +6,7 @@ import cors from 'cors'
 
 const app = express()
 Dbconnection()
-app.use(cors())
+app.use(cors({ origin: '*' }))
 app.use(express.json({limit : '5mb'}))
 dotenv.config()
 
