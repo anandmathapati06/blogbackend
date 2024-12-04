@@ -4,12 +4,12 @@ import dotenv from 'dotenv'
 import { open ,createBlog ,fetchBlogs ,byId} from './controller.js'
 import cors from 'cors'
 
+
 const app = express()
 app.use(cors({ origin: '*' }))
 app.use(express.json({limit : '5mb'}))
 dotenv.config()
 
-Dbconnection()
 // app.use(express.static("./frontend/blogsite/dist"))
 
 // app.get("*", (req,res)=>{
@@ -22,7 +22,8 @@ app.get("/blogs",fetchBlogs)
 app.get("/blogs/:id",byId)
 
 
-app.listen(8000,()=>{
+app.listen(8000,async ()=>{
     console.log("listining...");
+    await Dbconnection();
     
 })
